@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.13, pytest-6.2.2, py-1.11.0, pluggy-0.13.1 -- /Users/ivopdm/.conda/envs/mlflow-4c1cdf8001375c24c7bf419e58fea14beebc6ff3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-3-data-validation/exercises/exercise_9/starter
+collecting ... collected 1 item
+
+test_data.py::test_kolmogorov_smirnov_with_fixtures PASSED
+
+=============================== warnings summary ===============================
+../../../../../../../.conda/envs/mlflow-4c1cdf8001375c24c7bf419e58fea14beebc6ff3/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175
+  /Users/ivopdm/.conda/envs/mlflow-4c1cdf8001375c24c7bf419e58fea14beebc6ff3/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+    class OrderedSet(collections.MutableSet):
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+========================= 1 passed, 1 warning in 3.77s =========================

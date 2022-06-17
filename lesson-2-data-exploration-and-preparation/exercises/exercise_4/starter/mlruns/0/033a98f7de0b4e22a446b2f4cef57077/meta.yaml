@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/mlruns/0/033a98f7de0b4e22a446b2f4cef57077/artifacts
+end_time: 1651680537364
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 033a98f7de0b4e22a446b2f4cef57077
+run_uuid: 033a98f7de0b4e22a446b2f4cef57077
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1651679148711
+status: 4
+tags: []
+user_id: ivopdm

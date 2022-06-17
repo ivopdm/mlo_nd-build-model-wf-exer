@@ -1,0 +1,14 @@
+2022-06-12 20:14:16,978 INFO    MainThread:1901 [wandb_setup.py:_flush():69] setting env: {'project': 'exercise_11', 'run_group': 'dev'}
+2022-06-12 20:14:16,978 INFO    MainThread:1901 [wandb_setup.py:_flush():69] setting login settings: {}
+2022-06-12 20:14:16,978 INFO    MainThread:1901 [wandb_init.py:_log_setup():334] Logging user logs to /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-4-training-validation-experiment-tracking/exercises/exercise_11/starter/random_forest/wandb/run-20220612_201416-2u5c1brh/logs/debug.log
+2022-06-12 20:14:16,979 INFO    MainThread:1901 [wandb_init.py:_log_setup():335] Logging internal logs to /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-4-training-validation-experiment-tracking/exercises/exercise_11/starter/random_forest/wandb/run-20220612_201416-2u5c1brh/logs/debug-internal.log
+2022-06-12 20:14:16,979 INFO    MainThread:1901 [wandb_init.py:init():367] calling init triggers
+2022-06-12 20:14:16,979 INFO    MainThread:1901 [wandb_init.py:init():372] wandb.init called with sweep_config: {}
+config: {}
+2022-06-12 20:14:16,979 INFO    MainThread:1901 [wandb_init.py:init():416] starting backend
+2022-06-12 20:14:16,979 INFO    MainThread:1901 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-06-12 20:14:16,989 INFO    MainThread:1901 [backend.py:ensure_launched():123] starting backend process...
+2022-06-12 20:14:17,000 INFO    MainThread:1901 [backend.py:ensure_launched():127] started backend process with pid: 1970
+2022-06-12 20:14:17,003 INFO    MainThread:1901 [wandb_init.py:init():421] backend started and connected
+2022-06-12 20:14:17,007 INFO    MainThread:1901 [wandb_init.py:init():461] updated telemetry
+2022-06-12 20:14:17,008 INFO    MainThread:1901 [wandb_init.py:init():480] communicating current version

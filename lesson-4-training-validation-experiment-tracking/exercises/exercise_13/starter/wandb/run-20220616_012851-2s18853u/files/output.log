@@ -1,0 +1,23 @@
+2022-06-16 01:28:53,382 Downloading and reading test artifact
+Traceback (most recent call last):
+  File "run.py", line 87, in <module>
+    go(args)
+  File "run.py", line 21, in go
+    df = pd.read_csv(test_data_path, low_memory=False)
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 610, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 462, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 819, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 1050, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 1867, in __init__
+    self._open_handles(src, kwds)
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/parsers.py", line 1362, in _open_handles
+    self.handles = get_handle(
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/common.py", line 558, in get_handle
+    ioargs = _get_filepath_or_buffer(
+  File "/Users/ivopdm/.conda/envs/mlflow-9ad98997f01f10ca95d41cc160bcad3e8dac16f6/lib/python3.8/site-packages/pandas/io/common.py", line 371, in _get_filepath_or_buffer
+    raise ValueError(msg)
+ValueError: Invalid file path or buffer object type: <class 'wandb.apis.public.Artifact'>

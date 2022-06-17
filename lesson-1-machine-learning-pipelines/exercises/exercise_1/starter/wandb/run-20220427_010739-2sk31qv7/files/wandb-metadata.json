@@ -1,0 +1,31 @@
+{
+    "os": "Darwin-21.3.0-x86_64-i386-64bit",
+    "python": "3.7.3",
+    "heartbeatAt": "2022-04-27T04:07:48.690018",
+    "startedAt": "2022-04-27T04:07:39.776582",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--input_file",
+        "zen.txt",
+        "--artifact_name",
+        "zen_of_python",
+        "--artifact_type",
+        "text_file",
+        "--artifact_description",
+        "20 aphorisms about writing good python code"
+    ],
+    "state": "running",
+    "program": "upload_artifact.py",
+    "codePath": "lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/upload_artifact.py",
+    "git": {
+        "remote": "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises.git",
+        "commit": "b4e585e68b0758a9897c69f793a7d22f63426a9c"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3"
+}

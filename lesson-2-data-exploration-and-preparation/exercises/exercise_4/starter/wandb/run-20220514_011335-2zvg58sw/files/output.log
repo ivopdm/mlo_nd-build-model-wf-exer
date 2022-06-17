@@ -1,0 +1,7 @@
+Requirement already satisfied: jinja2 in /Users/ivopdm/.conda/envs/mlflow-51a201f2a8eac0601d78afdf58767b0a4aa0f41a/lib/python3.9/site-packages (3.1.1)
+Requirement already satisfied: MarkupSafe>=2.0 in /Users/ivopdm/.conda/envs/mlflow-51a201f2a8eac0601d78afdf58767b0a4aa0f41a/lib/python3.9/site-packages (from jinja2) (2.1.1)
+[31mERROR: Could not find a version that satisfies the requirement jinja2.utils[0m
+[31mERROR: No matching distribution found for jinja2.utils[0m
+Requirement already satisfied: jinja2[utils] in /Users/ivopdm/.conda/envs/mlflow-51a201f2a8eac0601d78afdf58767b0a4aa0f41a/lib/python3.9/site-packages (3.1.1)
+[33mWARNING: jinja2 3.1.1 does not provide the extra 'utils'[0m
+Requirement already satisfied: MarkupSafe>=2.0 in /Users/ivopdm/.conda/envs/mlflow-51a201f2a8eac0601d78afdf58767b0a4aa0f41a/lib/python3.9/site-packages (from jinja2[utils]) (2.1.1)

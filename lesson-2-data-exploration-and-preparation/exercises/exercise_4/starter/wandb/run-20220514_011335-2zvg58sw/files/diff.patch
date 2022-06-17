@@ -1,0 +1,129 @@
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/upload_artifact.py b/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/upload_artifact.py
+index cb43d39..18daebc 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/upload_artifact.py
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/upload_artifact.py
+@@ -15,21 +15,23 @@ def go(args):
+ 
+     # Create a W&B run in the project ``exercise_1``. Set the option ``job_type="upload_file"``:
+ 
+-    # YOUR CODE HERE
+-
++    run = wandb.init(
++        project="exercise_1",
++        job_type="upload_file"
++    )
+     # Create an instance of the class ``wandb.Artifact``. Use the ``artifact_name`` parameter to fill
+     # the keyword ``name`` when constructing the wandb.Artifact class.
+     # Use the parameters ``artifact_type`` and ``artifact_desc`` to fill respectively the keyword
+     # ``type`` and ``description``
+     # HINT: you can use args.artifact_name to reference the parameter artifact_name
+ 
+-    # YOUR CODE HERE
++    artifact = wandb.Artifact(name=args.artifact_name, description=args.artifact_description, type=args.artifact_type)
+ 
+     # Attach the file provided as the parameter ``input_file`` to the artifact instance using
+     # ``artifact.add_file``, and log the artifact to the run using ``run.log_artifact``.
+-
+-    # YOUR CODE HERE
+-
++    
++    artifact.add_file(args.input_file)
++    run.log_artifact(artifact)
+ 
+ if __name__ == "__main__":
+     parser = argparse.ArgumentParser(
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/use_artifact.py b/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/use_artifact.py
+index f455e13..8a494c5 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/use_artifact.py
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/use_artifact.py
+@@ -15,10 +15,9 @@ def go(args):
+     run = wandb.init(project="exercise_1", job_type="use_file")
+ 
+     logger.info("Getting artifact")
++    artifact = run.use_artifact(args.artifact_name)
+ 
+-    # YOUR CODE HERE: get the artifact and store its local path in the variable "artifact_path"
+-    # HINT: you can get the artifact path by using the "file()" method
+-
++    logger.info("Artifact content: ")
+     artifact_path = artifact.file()
+ 
+     logger.info("Artifact content:")
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/conda.yml b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/conda.yml
+index b735436..1713983 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/conda.yml
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/conda.yml
+@@ -3,4 +3,10 @@ channels:
+   - conda-forge
+   - defaults
+ dependencies:
+-  # Complete HERE
++  - requests=2.24.0
++  - pip=20.3.3
++  - mlflow=1.17.0
++  - hydra-core=1.0.6
++  - python=3.8
++  - pip:
++    - wandb==0.10.31
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/download_data/conda.yml b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/download_data/conda.yml
+index 42cd9c8..e5b4c06 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/download_data/conda.yml
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/download_data/conda.yml
+@@ -5,5 +5,6 @@ channels:
+ dependencies:
+   - requests=2.24.0
+   - pip=20.3.3
++  - python=3.8
+   - pip:
+-      - wandb==0.10.21
+\ No newline at end of file
++      - wandb==0.10.31
+\ No newline at end of file
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/main.py b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/main.py
+index 47fba9e..0d01278 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/main.py
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/main.py
+@@ -33,6 +33,16 @@ def go(config: DictConfig):
+     # to the "process_data" component
+     ##################
+ 
++    _ = mlflow.run(
++        os.path.join(root_path, "process_data"),
++        entry_point="main",
++        parameters={
++            "input_artifact": "iris.csv:latest",
++            "artifact_name": "cleaned_data",
++            "artifact_type": "clean_data",
++            "artifact_description": "Cleaned data"
++        }
++    )
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/conda.yml b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/conda.yml
+index 09811f0..e0222b6 100644
+--- a/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/conda.yml
++++ b/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/conda.yml
+@@ -10,5 +10,6 @@ dependencies:
+   - scikit-learn=0.24.1
+   - matplotlib==3.2.2
+   - pillow=8.1.2
++  - python=3.8
+   - pip:
+-      - wandb==0.10.21
+\ No newline at end of file
++      - wandb==0.10.31
+\ No newline at end of file
+diff --git a/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/MLproject b/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/MLproject
+index e69de29..3fe4fb3 100644
+--- a/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/MLproject
++++ b/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/MLproject
+@@ -0,0 +1,7 @@
++name: eda_tracking
++conda_env: conda.yml
++
++entry_points:
++    main:
++      command: >-
++        jupyter notebook
+\ No newline at end of file

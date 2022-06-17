@@ -1,0 +1,18 @@
+2022-06-12 20:13:57,586 Downloading and reading train artifact
+Traceback (most recent call last):
+  File "run.py", line 176, in <module>
+    go(args)
+  File "run.py", line 31, in go
+    df = pd.read_csv(train_data_path, low_memory=False)
+  File "/Users/ivopdm/.conda/envs/mlflow-e89395428e10f31b8a83e7119447831e6cb0c89f/lib/python3.8/site-packages/pandas/io/parsers.py", line 610, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/ivopdm/.conda/envs/mlflow-e89395428e10f31b8a83e7119447831e6cb0c89f/lib/python3.8/site-packages/pandas/io/parsers.py", line 462, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/ivopdm/.conda/envs/mlflow-e89395428e10f31b8a83e7119447831e6cb0c89f/lib/python3.8/site-packages/pandas/io/parsers.py", line 819, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/Users/ivopdm/.conda/envs/mlflow-e89395428e10f31b8a83e7119447831e6cb0c89f/lib/python3.8/site-packages/pandas/io/parsers.py", line 1050, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/Users/ivopdm/.conda/envs/mlflow-e89395428e10f31b8a83e7119447831e6cb0c89f/lib/python3.8/site-packages/pandas/io/parsers.py", line 1898, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 521, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file

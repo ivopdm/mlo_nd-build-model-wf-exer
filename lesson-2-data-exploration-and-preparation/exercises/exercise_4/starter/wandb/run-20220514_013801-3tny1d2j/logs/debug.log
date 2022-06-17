@@ -1,0 +1,35 @@
+2022-05-14 01:38:01,350 INFO    MainThread:2003 [wandb_setup.py:_flush():69] setting env: {}
+2022-05-14 01:38:01,351 INFO    MainThread:2003 [wandb_setup.py:_flush():69] setting login settings: {}
+2022-05-14 01:38:01,351 INFO    MainThread:2003 [wandb_init.py:_log_setup():334] Logging user logs to /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/wandb/run-20220514_013801-3tny1d2j/logs/debug.log
+2022-05-14 01:38:01,351 INFO    MainThread:2003 [wandb_init.py:_log_setup():335] Logging internal logs to /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/wandb/run-20220514_013801-3tny1d2j/logs/debug-internal.log
+2022-05-14 01:38:01,352 INFO    MainThread:2003 [wandb_init.py:_jupyter_setup():285] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x10b69c1c0>
+2022-05-14 01:38:01,352 INFO    MainThread:2003 [wandb_init.py:init():367] calling init triggers
+2022-05-14 01:38:01,352 INFO    MainThread:2003 [wandb_init.py:init():372] wandb.init called with sweep_config: {}
+config: {}
+2022-05-14 01:38:01,353 INFO    MainThread:2003 [wandb_init.py:init():416] starting backend
+2022-05-14 01:38:01,353 INFO    MainThread:2003 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-05-14 01:38:01,376 INFO    MainThread:2003 [backend.py:ensure_launched():123] starting backend process...
+2022-05-14 01:38:01,383 INFO    MainThread:2003 [backend.py:ensure_launched():127] started backend process with pid: 2020
+2022-05-14 01:38:01,386 INFO    MainThread:2003 [wandb_init.py:init():421] backend started and connected
+2022-05-14 01:38:01,388 INFO    MainThread:2003 [wandb_init.py:init():461] updated telemetry
+2022-05-14 01:38:01,389 INFO    MainThread:2003 [wandb_init.py:init():480] communicating current version
+2022-05-14 01:38:01,954 INFO    MainThread:2003 [wandb_init.py:init():485] got version response upgrade_message: "wandb version 0.12.16 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-05-14 01:38:01,955 INFO    MainThread:2003 [wandb_init.py:init():493] communicating run to backend with 30 second timeout
+2022-05-14 01:38:02,267 INFO    MainThread:2003 [wandb_init.py:init():518] starting run threads in backend
+2022-05-14 01:38:02,399 INFO    MainThread:2003 [wandb_run.py:_console_start():1476] atexit reg
+2022-05-14 01:38:02,399 INFO    MainThread:2003 [wandb_run.py:_redirect():1339] redirect: SettingsConsole.WRAP
+2022-05-14 01:38:02,400 INFO    MainThread:2003 [wandb_run.py:_redirect():1374] Wrapping output streams.
+2022-05-14 01:38:02,400 INFO    MainThread:2003 [wandb_run.py:_redirect():1390] Redirects installed.
+2022-05-14 01:38:02,400 INFO    MainThread:2003 [wandb_init.py:init():542] run started, returning control to user process
+2022-05-14 01:38:02,400 INFO    MainThread:2003 [wandb_init.py:_pause_backend():247] pausing backend
+2022-05-14 01:38:02,400 INFO    MainThread:2003 [jupyter.py:save_ipynb():268] looking for notebook: EDA.ipynb
+2022-05-14 01:38:02,650 INFO    MainThread:2003 [wandb_init.py:_pause_backend():251] saved code: <wandb.sdk.wandb_artifacts.Artifact object at 0x107786d30>
+2022-05-14 01:38:05,473 INFO    MainThread:2003 [wandb_init.py:_resume_backend():256] resuming backend
+2022-05-14 01:38:10,662 INFO    MainThread:2003 [wandb_init.py:_pause_backend():247] pausing backend
+2022-05-14 01:38:10,662 INFO    MainThread:2003 [jupyter.py:save_ipynb():268] looking for notebook: EDA.ipynb
+2022-05-14 01:38:10,914 INFO    MainThread:2003 [wandb_init.py:_pause_backend():251] saved code: <wandb.sdk.wandb_artifacts.Artifact object at 0x107772400>
+2022-05-14 01:38:26,279 INFO    MainThread:2003 [wandb_init.py:_resume_backend():256] resuming backend
+2022-05-14 01:38:59,060 INFO    MainThread:2003 [wandb_init.py:_pause_backend():247] pausing backend
+2022-05-14 01:38:59,060 INFO    MainThread:2003 [jupyter.py:save_ipynb():268] looking for notebook: EDA.ipynb
+2022-05-14 01:38:59,326 INFO    MainThread:2003 [wandb_init.py:_pause_backend():251] saved code: <wandb.sdk.wandb_artifacts.Artifact object at 0x1634f4dc0>

@@ -12,3 +12,4 @@ dependencies:
   - pip:
       - wandb==0.10.21
       - omegaconf==2.0.6
+      - protobuf==3.19.0

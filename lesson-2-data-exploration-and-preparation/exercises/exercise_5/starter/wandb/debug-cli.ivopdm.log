@@ -1,0 +1,30 @@
+2022-05-18 15:53:42 ERROR Traceback (most recent call last):
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 773, in artifact
+    artifact = Artifact(self.client, entity, project, artifact_name)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 3489, in __init__
+    self._load()
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 4056, in _load
+    raise ValueError(
+ValueError: Project ivopdm/exercise_5 does not contain artifact: "preprocessed_data.csv:latest"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/cli/cli.py", line 1607, in get
+    artifact = public_api.artifact(full_path, type=type)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 773, in artifact
+    artifact = Artifact(self.client, entity, project, artifact_name)
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 3489, in __init__
+    self._load()
+  File "/Users/ivopdm/.conda/envs/udacity/lib/python3.8/site-packages/wandb/apis/public.py", line 4056, in _load
+    raise ValueError(
+wandb.errors.CommError: Project ivopdm/exercise_5 does not contain artifact: "preprocessed_data.csv:latest"
+

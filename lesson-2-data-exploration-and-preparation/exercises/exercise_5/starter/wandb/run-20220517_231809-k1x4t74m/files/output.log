@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "run.py", line 61, in <module>
+    go(args)
+  File "run.py", line 17, in go
+    df = pd.read_parquet(artifact.file())
+  File "/Library/Python/3.7/site-packages/pandas/io/parquet.py", line 295, in read_parquet
+    impl = get_engine(engine)
+  File "/Library/Python/3.7/site-packages/pandas/io/parquet.py", line 32, in get_engine
+    "Unable to find a usable engine; "
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+pyarrow or fastparquet is required for parquet support

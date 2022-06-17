@@ -1,0 +1,24 @@
+{
+    "os": "macOS-12.3.1-x86_64-i386-64bit",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-05-14T04:38:02.270096",
+    "startedAt": "2022-05-14T04:38:01.346718",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/Users/ivopdm/Library/Jupyter/runtime/kernel-4e831c94-ad0e-4aa9-acee-bfe905966f68.json"
+    ],
+    "state": "running",
+    "program": "EDA.ipynb",
+    "root": "/Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises",
+    "git": {
+        "remote": "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises.git",
+        "commit": "b4e585e68b0758a9897c69f793a7d22f63426a9c"
+    },
+    "email": "ivopdm@gmail.com",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Users/ivopdm/.conda/envs/mlflow-ebb12fefc4d8a2283bec16382eda326816f1890b/bin/python"
+}

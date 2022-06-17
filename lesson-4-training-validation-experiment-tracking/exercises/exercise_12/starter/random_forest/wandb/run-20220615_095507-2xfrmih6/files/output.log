@@ -1,0 +1,16 @@
+2022-06-15 09:55:08,800 Downloading and reading train artifact
+2022-06-15 09:55:13,033 Extracting target from dataframe
+2022-06-15 09:55:13,039 Splitting train/val
+2022-06-15 09:55:13,067 Setting up pipeline
+2022-06-15 09:55:13,073 Fitting
+2022-06-15 09:55:15,634 Scoring
+/Users/ivopdm/.conda/envs/mlflow-259d53ab44a1e9011b0c64ae862f43343c0fc9e5/lib/python3.8/site-packages/mlflow/models/signature.py:123: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  inputs = _infer_schema(model_input)
+Traceback (most recent call last):
+  File "run.py", line 230, in <module>
+    go(args)
+  File "run.py", line 64, in go
+    export_model(run, pipe, X_val, pred, args.export_artifact)
+  File "run.py", line 113, in export_model
+    artifact = wandb.Artifact("artifact")
+TypeError: __init__() missing 1 required positional argument: 'type'

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/mlruns/0/d97040f8ccdc4e2ab61c4f8bc383f289/artifacts
+end_time: 1651543242266
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: d97040f8ccdc4e2ab61c4f8bc383f289
+run_uuid: d97040f8ccdc4e2ab61c4f8bc383f289
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1651543104309
+status: 4
+tags: []
+user_id: ivopdm

@@ -1,0 +1,18 @@
+2022-05-20 09:37:25,077 Downloading and reading artifact
+2022-05-20 09:37:26,554 Splitting data into train and test
+Traceback (most recent call last):
+  File "run.py", line 120, in <module>
+    go(args)
+  File "run.py", line 30, in go
+    splits["train"], splits["test"] = train_test_split(df, \
+  File "/Users/ivopdm/.conda/envs/mlflow-2b1ad849cb5860f74406cc875a50bb09825a1a67/lib/python3.8/site-packages/sklearn/model_selection/_split.py", line 2197, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+  File "/Users/ivopdm/.conda/envs/mlflow-2b1ad849cb5860f74406cc875a50bb09825a1a67/lib/python3.8/site-packages/sklearn/model_selection/_split.py", line 1793, in split
+    y = check_array(y, ensure_2d=False, dtype=None)
+  File "/Users/ivopdm/.conda/envs/mlflow-2b1ad849cb5860f74406cc875a50bb09825a1a67/lib/python3.8/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+  File "/Users/ivopdm/.conda/envs/mlflow-2b1ad849cb5860f74406cc875a50bb09825a1a67/lib/python3.8/site-packages/sklearn/utils/validation.py", line 667, in check_array
+    n_samples = _num_samples(array)
+  File "/Users/ivopdm/.conda/envs/mlflow-2b1ad849cb5860f74406cc875a50bb09825a1a67/lib/python3.8/site-packages/sklearn/utils/validation.py", line 202, in _num_samples
+    raise TypeError("Singleton array %r cannot be considered"
+TypeError: Singleton array array('genre', dtype='<U5') cannot be considered a valid collection.

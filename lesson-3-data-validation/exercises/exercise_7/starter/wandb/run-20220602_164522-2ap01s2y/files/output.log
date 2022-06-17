@@ -1,0 +1,56 @@
+[1mcollecting 3 items                                                             [0m[1mcollected 3 items                                                              [0m
+
+test_data.py::test_column_presence_and_type [32mPASSED[0m
+test_data.py::test_class_names [32mPASSED[0m
+test_data.py::test_column_ranges [31mFAILED[0m
+
+=================================== FAILURES ===================================
+[31m[1m______________________________ test_column_ranges ______________________________[0m
+
+data =        Unnamed: 0  ...                                    text_feature
+0               0  ...                         ...   Southern Hostility
+42895       42895  ...      Psytrance: From Full on to Forrest Trance 
+
+[42896 rows x 19 columns]
+
+    def test_column_ranges(data):
+    
+        # A dictionary with the column names as key and a function that verifies
+        # the expected range for that column. We do not check strict ranges (like
+        # np.int32 vs np.int64) but general ranges (like is_integer_dtype)
+        ranges = {
+            "time_signature": (1, 5),
+            "key": (0, 11),
+            "danceability": (0, 1),
+            "energy": (0, 1),
+            "loudness": (-35, 5),
+            "speechiness": (0, 1),
+            "acousticness": (0, 1),
+            "instrumentalness": (0, 1),
+            "liveness": (0, 1),
+            "valence": (0, 1),
+            "tempo": (50, 250),
+            "duration_ms": (20000, 1000000),
+        }
+    
+        # Check column ranges
+        for col_name, range_verification_funct in ranges.items():
+    
+>           assert data[col_name].between(*range_verification_funct).all(), f"Column {col_name} failed test {range_verification_funct}"
+[1m[31mE           AssertionError: Column loudness failed test (-35, 5)[0m
+[1m[31mE           assert False[0m
+[1m[31mE            +  where False = <bound method NDFrame._add_numeric_operations.<locals>.all of 0         True\n1         True\n2        False\n3         T...\n42891     True\n42892    False\n42893     True\n42894     True\n42895     True\nName: loudness, Length: 42896, dtype: bool>()[0m
+[1m[31mE            +    where <bound method NDFrame._add_numeric_operations.<locals>.all of 0         True\n1         True\n2        False\n3         T...\n42891     True\n42892    False\n42893     True\n42894     True\n42895     True\nName: loudness, Length: 42896, dtype: bool> = 0         True\n1         True\n2        False\n3         True\n4         True\n         ...  \n42891     True\n42892    False\n42893     True\n42894     True\n42895     True\nName: loudness, Length: 42896, dtype: bool.all[0m
+[1m[31mE            +      where 0         True\n1         True\n2        False\n3         True\n4         True\n         ...  \n42891     True\n42892    False\n42893     True\n42894     True\n42895     True\nName: loudness, Length: 42896, dtype: bool = <bound method Series.between of 0       -7.364\n1       -7.230\n2          NaN\n3       -4.710\n4       -7.668\n         .....891   -9.348\n42892      NaN\n42893   -5.182\n42894   -9.841\n42895   -6.898\nName: loudness, Length: 42896, dtype: float64>(*(-35, 5))[0m
+[1m[31mE            +        where <bound method Series.between of 0       -7.364\n1       -7.230\n2          NaN\n3       -4.710\n4       -7.668\n         .....891   -9.348\n42892      NaN\n42893   -5.182\n42894   -9.841\n42895   -6.898\nName: loudness, Length: 42896, dtype: float64> = 0       -7.364\n1       -7.230\n2          NaN\n3       -4.710\n4       -7.668\n         ...  \n42891   -9.348\n42892      NaN\n42893   -5.182\n42894   -9.841\n42895   -6.898\nName: loudness, Length: 42896, dtype: float64.between[0m
+
+[1m[31mtest_data.py[0m:94: AssertionError
+[33m=============================== warnings summary ===============================[0m
+../../../../../../../.conda/envs/mlflow-9e575d95444118b8d1507dd8b807a56d8ff0e014/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175
+  /Users/ivopdm/.conda/envs/mlflow-9e575d95444118b8d1507dd8b807a56d8ff0e014/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+    class OrderedSet(collections.MutableSet):
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED test_data.py::test_column_ranges - AssertionError: Column loudness fai...
+[31m=================== [31m[1m1 failed[0m, [32m2 passed[0m, [33m1 warning[0m[31m in 25.76s[0m[31m ====================[0m

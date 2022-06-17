@@ -1,0 +1,58 @@
+[1mcollecting 1 item                                                              [0m[1mcollected 1 item                                                               [0m
+
+test_data.py::test_kolmogorov_smirnov [31mFAILED[0m
+
+=================================== FAILURES ===================================
+[31m[1m___________________________ test_kolmogorov_smirnov ____________________________[0m
+
+data = (       Unnamed: 0  ...                                       text_feature
+0           29938  ...                     ...                 What They Do
+12868         681  ...                         Make Me Forget
+
+[12869 rows x 20 columns])
+
+    def test_kolmogorov_smirnov(data):
+    
+        sample1, sample2 = data
+    
+        numerical_columns = [
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "duration_ms"
+        ]
+    
+        # Let's decide the Type I error probability (related to the False Positive Rate)
+        alpha = 0.05
+        # Bonferroni correction for multiple hypothesis testing
+        # (see my blog post on this topic to see where this comes from:
+        # https://towardsdatascience.com/precision-and-recall-trade-off-and-multiple-hypothesis-testing-family-wise-error-rate-vs-false-71a85057ca2b)
+        alpha_prime = 1 - (1 - alpha)**(1 / len(numerical_columns))
+    
+        for col in numerical_columns:
+    
+            # Use the 2-sample KS test (scipy.stats.ks_2sample) on the column
+            # to determine if the distributions are the same
+            ts, p_value = scipy.stats.ks_2samp(sample1[col], sample2[col], alternative="two-sided")
+    
+            # Add an assertion so that the test fails if p_value > alpha_prime
+>           assert p_value <= alpha_prime, f"The p-value for the Kolmogorov-Smirnov test on the {col} column is {p_value}, which is greater than the alpha_prime of {alpha_prime}."
+[1m[31mE           AssertionError: The p-value for the Kolmogorov-Smirnov test on the danceability column is 0.3380611946648454, which is greater than the alpha_prime of 0.005116196891823743.[0m
+[1m[31mE           assert 0.3380611946648454 <= 0.005116196891823743[0m
+
+[1m[31mtest_data.py[0m:54: AssertionError
+[33m=============================== warnings summary ===============================[0m
+../../../../../../../.conda/envs/mlflow-4c1cdf8001375c24c7bf419e58fea14beebc6ff3/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175
+  /Users/ivopdm/.conda/envs/mlflow-4c1cdf8001375c24c7bf419e58fea14beebc6ff3/lib/python3.9/site-packages/wandb/vendor/watchdog/utils/bricks.py:175: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+    class OrderedSet(collections.MutableSet):
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED test_data.py::test_kolmogorov_smirnov - AssertionError: The p-value fo...
+[31m========================= [31m[1m1 failed[0m, [33m1 warning[0m[31m in 4.90s[0m[31m =========================[0m

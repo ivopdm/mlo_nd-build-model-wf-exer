@@ -1,0 +1,25 @@
+{
+    "os": "macOS-12.4-x86_64-i386-64bit",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-06-02T19:47:42.942540",
+    "startedAt": "2022-06-02T19:47:42.002322",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "-s",
+        "-vv",
+        "."
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises.git",
+        "commit": "b4e585e68b0758a9897c69f793a7d22f63426a9c"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Users/ivopdm/.conda/envs/mlflow-9e575d95444118b8d1507dd8b807a56d8ff0e014/bin/python"
+}

@@ -1,0 +1,9 @@
+2022-04-27 01:07:12,997 Creating artifact
+Traceback (most recent call last):
+  File "upload_artifact.py", line 55, in <module>
+    go(args)
+  File "upload_artifact.py", line 23, in go
+    artifact.add_file(args.input_file)
+  File "/Users/ivopdm/Library/Python/3.7/lib/python/site-packages/wandb/sdk/wandb_artifacts.py", line 372, in add_file
+    raise ValueError("Path is not a file: %s" % local_path)
+ValueError: Path is not a file: zen.txt

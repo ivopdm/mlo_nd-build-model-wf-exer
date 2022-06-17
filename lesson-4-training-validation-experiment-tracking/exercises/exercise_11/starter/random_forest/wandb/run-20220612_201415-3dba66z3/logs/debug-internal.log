@@ -1,0 +1,7 @@
+2022-06-12 20:14:17,143 INFO    MainThread:1953 [internal.py:wandb_internal():88] W&B internal server running at pid: 1953, started at: 2022-06-12 20:14:17.142702
+2022-06-12 20:14:17,168 DEBUG   HandlerThread:1953 [handler.py:handle_request():101] handle_request: check_version
+2022-06-12 20:14:17,168 DEBUG   SenderThread:1953 [sender.py:send():122] send: header
+2022-06-12 20:14:17,168 INFO    WriterThread:1953 [datastore.py:open_for_write():77] open: /Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-4-training-validation-experiment-tracking/exercises/exercise_11/starter/random_forest/wandb/run-20220612_201415-3dba66z3/run-3dba66z3.wandb
+2022-06-12 20:14:17,169 DEBUG   SenderThread:1953 [sender.py:send():122] send: request
+2022-06-12 20:14:17,169 DEBUG   SenderThread:1953 [sender.py:send_request():131] send_request: check_version
+2022-06-12 20:14:17,361 DEBUG   SenderThread:1953 [sender.py:send():122] send: run

@@ -1,0 +1,25 @@
+{
+    "os": "Darwin-21.3.0-x86_64-i386-64bit",
+    "python": "3.7.3",
+    "heartbeatAt": "2022-04-28T01:30:22.453684",
+    "startedAt": "2022-04-28T01:30:21.381882",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--artifact_name",
+        "exercise_1/zen_of_python:v0"
+    ],
+    "state": "running",
+    "program": "use_artifact.py",
+    "codePath": "lesson-1-machine-learning-pipelines/exercises/exercise_1/starter/use_artifact.py",
+    "git": {
+        "remote": "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises.git",
+        "commit": "b4e585e68b0758a9897c69f793a7d22f63426a9c"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3"
+}

@@ -47,8 +47,8 @@ def test_kolmogorov_smirnov(data):
     for col in numerical_columns:
 
         # Use the 2-sample KS test (scipy.stats.ks_2sample) on the column
-        # col
-        ts, p_value = # YOUR CODE HERE
-
+        # to determine if the distributions are the same
+        ts, p_value = scipy.stats.ks_2samp(sample1[col], sample2[col], alternative="two-sided")
+                
         # Add an assertion so that the test fails if p_value > alpha_prime
-        # YOUR CODE HERE
+        assert p_value <= alpha_prime, f"The p-value for the Kolmogorov-Smirnov test on the {col} column is {p_value}, which is greater than the alpha_prime of {alpha_prime}."

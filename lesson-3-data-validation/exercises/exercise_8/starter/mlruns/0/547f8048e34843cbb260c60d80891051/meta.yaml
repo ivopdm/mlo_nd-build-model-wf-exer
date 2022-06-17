@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-3-data-validation/exercises/exercise_8/starter/mlruns/0/547f8048e34843cbb260c60d80891051/artifacts
+end_time: 1654201874674
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 547f8048e34843cbb260c60d80891051
+run_uuid: 547f8048e34843cbb260c60d80891051
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1654201718503
+status: 4
+tags: []
+user_id: ivopdm

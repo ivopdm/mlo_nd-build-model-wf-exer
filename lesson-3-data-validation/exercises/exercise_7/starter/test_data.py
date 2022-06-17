@@ -10,7 +10,7 @@ run = wandb.init(project="exercise_7", job_type="data_tests")
 @pytest.fixture(scope="session")
 def data():
 
-    local_path = run.use_artifact("exercise_5/preprocessed_data.csv:latest").file()
+    local_path = run.use_artifact("exercise_5/preprocessed_data:latest").file()
     df = pd.read_csv(local_path, low_memory=False)
 
     return df
@@ -48,7 +48,6 @@ def test_column_presence_and_type(data):
 
 
 def test_class_names(data):
-
     known_classes = [
         "Dark Trap",
         "Underground Rap",
@@ -66,16 +65,14 @@ def test_class_names(data):
         "dnb",
         "hardstyle",
     ]
-
-    # YOUR CODE HERE: implement a test that checks the "genre" column to make sure
-    # that the class names are legal
-    # HINT: you can use the .isin method of pandas, and .all to check that the condition
-    # is true for every row. For example, df['one'].isin(['a','b','c']).all() is True if
-    # all values in column "one" are contained in the list 'a', 'b', 'c'
-
+    # Check that the genre column has only the expected class names
+    assert set(data["genre"]).issuperset(set(known_classes))
 
 def test_column_ranges(data):
 
+    # A dictionary with the column names as key and a function that verifies
+    # the expected range for that column. We do not check strict ranges (like
+    # np.int32 vs np.int64) but general ranges (like is_integer_dtype)
     ranges = {
         "time_signature": (1, 5),
         "key": (0, 11),
@@ -91,8 +88,8 @@ def test_column_ranges(data):
         "duration_ms": (20000, 1000000),
     }
 
-    for col_name, (minimum, maximum) in ranges.items():
-        # YOUR CODE HERE: check that the values in the column col_name are within the expected range
-        # HINT: look at the .between method of pandas, and then use .all() like in the previous
-        # test
-        pass
+    # Check column ranges
+    for col_name, range_verification_funct in ranges.items():
+
+        assert data[col_name].dropna().between(*range_verification_funct).all(), f"Column {col_name} failed test {range_verification_funct}"
+

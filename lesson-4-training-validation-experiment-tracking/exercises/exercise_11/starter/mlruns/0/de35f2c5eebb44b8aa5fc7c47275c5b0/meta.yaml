@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ivopdm/Documents/GitHub/nd0821-c2-build-model-workflow-exercises/lesson-4-training-validation-experiment-tracking/exercises/exercise_11/starter/mlruns/0/de35f2c5eebb44b8aa5fc7c47275c5b0/artifacts
+end_time: 1655083947928
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: de35f2c5eebb44b8aa5fc7c47275c5b0
+run_uuid: de35f2c5eebb44b8aa5fc7c47275c5b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1655083899977
+status: 3
+tags: []
+user_id: ivopdm
