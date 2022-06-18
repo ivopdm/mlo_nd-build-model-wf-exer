@@ -1,0 +1,27 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-06-18T19:19:49.209100",
+    "startedAt": "2022-06-18T19:19:47.980698",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--model_export",
+        "exercise_12/model_export",
+        "--test_data",
+        "exercise_6/data_test.csv:latest"
+    ],
+    "state": "running",
+    "program": "run.py",
+    "codePath": "lesson-4-training-validation-experiment-tracking/exercises/exercise_13/starter/run.py",
+    "git": {
+        "remote": "https://github.com/ivopdm/mlo_nd-build-model-wf-exer.git",
+        "commit": "682265f4f5fc4cdea7c1a21dcbad8a02d4a34ecb"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/mlo_nd-build-model-wf-exer",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Users/ivopdm/.conda/envs/mlflow-f8b5853f2b26bd5a901af33dedeb16cab984e515/bin/python"
+}

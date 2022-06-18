@@ -6,5 +6,7 @@ dependencies:
   - pandas=1.2.3
   - pip=20.3.3
   - pyarrow=2.0
+  - python=3.8
   - pip:
       - wandb==0.10.21
+      - protobuf==3.19.0

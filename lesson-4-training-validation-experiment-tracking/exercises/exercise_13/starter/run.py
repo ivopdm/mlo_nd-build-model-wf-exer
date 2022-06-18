@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import logging
+import os
 import pandas as pd
 import wandb
 import mlflow.sklearn
@@ -29,10 +30,10 @@ def go(args):
 
     ## Get the args.model_export artifact from W&B locally. Since this artifact contains a directory
     # and not a single file, you will have to use .download() instead of .file()
-    model_export_path = run.use_artifact(args.model_export).download('./artifacts/model_export:latest')
+    model_export_path = run.use_artifact(args.model_export).download()
 
     # Load the model using mlflow.sklearn.load_model
-    pipe = mlflow.sklearn.load_model(model_export_path)
+    pipe = mlflow.sklearn.load_model(os.path.join(model_export_path, "model_export"))
 
     # Compute the prediction from the model using .predict_proba on the test set
     pred_proba = pipe.predict_proba(X_test)

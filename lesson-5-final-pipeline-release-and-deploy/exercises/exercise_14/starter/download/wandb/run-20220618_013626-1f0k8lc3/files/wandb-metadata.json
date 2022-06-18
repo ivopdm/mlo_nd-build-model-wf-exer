@@ -1,0 +1,31 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-06-18T04:36:27.678998",
+    "startedAt": "2022-06-18T04:36:26.102279",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--file_url",
+        "https://github.com/udacity/nd0821-c2-build-model-workflow-exercises/blob/master/lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/genres_mod.parquet?raw=true",
+        "--artifact_name",
+        "raw_data.parquet",
+        "--artifact_type",
+        "raw_data",
+        "--artifact_description",
+        "Data as downloaded"
+    ],
+    "state": "running",
+    "program": "download_data.py",
+    "codePath": "lesson-5-final-pipeline-release-and-deploy/exercises/exercise_14/starter/download/download_data.py",
+    "git": {
+        "remote": "https://github.com/ivopdm/mlo_nd-build-model-wf-exer.git",
+        "commit": "682265f4f5fc4cdea7c1a21dcbad8a02d4a34ecb"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/mlo_nd-build-model-wf-exer",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Users/ivopdm/.conda/envs/mlflow-d74266b74449ded4af2d0be71b6483c8c2695ece/bin/python"
+}
