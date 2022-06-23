@@ -1,0 +1,6 @@
+2022-06-21 01:31:54,647 Downloading and reading artifact
+2022-06-21 01:31:57,148 Splitting data into train, val and test
+2022-06-21 01:31:57,158 Uploading the train dataset to segregated_data_train.csv
+2022-06-21 01:31:57,441 Logging artifact
+2022-06-21 01:32:01,320 Uploading the test dataset to segregated_data_test.csv
+2022-06-21 01:32:01,457 Logging artifact

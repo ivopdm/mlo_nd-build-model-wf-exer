@@ -1,0 +1,15 @@
+2022-06-21 01:40:54,906 Downloading and reading test artifact
+2022-06-21 01:40:56,056 Extracting target from dataframe
+2022-06-21 01:40:56,058 Downloading and reading the exported model
+Traceback (most recent call last):
+  File "run.py", line 84, in <module>
+    go(args)
+  File "run.py", line 32, in go
+    pipe = mlflow.sklearn.load_model(os.path.join(model_export_path, "model_export"))
+  File "/Users/ivopdm/.conda/envs/mlflow-4f2bdb8272b96f1f31483c5e8de878562449c996/lib/python3.8/site-packages/mlflow/sklearn/__init__.py", line 445, in load_model
+    local_model_path = _download_artifact_from_uri(artifact_uri=model_uri)
+  File "/Users/ivopdm/.conda/envs/mlflow-4f2bdb8272b96f1f31483c5e8de878562449c996/lib/python3.8/site-packages/mlflow/tracking/artifact_utils.py", line 79, in _download_artifact_from_uri
+    return get_artifact_repository(artifact_uri=root_uri).download_artifacts(
+  File "/Users/ivopdm/.conda/envs/mlflow-4f2bdb8272b96f1f31483c5e8de878562449c996/lib/python3.8/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 79, in download_artifacts
+    raise IOError("No such file or directory: '{}'".format(local_artifact_path))
+OSError: No such file or directory: './artifacts/random_forest_model:v1/model_export'

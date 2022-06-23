@@ -1,0 +1,16 @@
+2022-06-21 01:27:35,580 Downloading and reading train artifact
+wandb: ERROR Project ivopdm/exercise_14 does not contain artifact: "segregated_data_train.csv:latest"
+Traceback (most recent call last):
+  File "/Users/ivopdm/.conda/envs/mlflow-4024711ee7c81427e4f3461efa20a2017b5d781f/lib/python3.8/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ivopdm/.conda/envs/mlflow-4024711ee7c81427e4f3461efa20a2017b5d781f/lib/python3.8/site-packages/wandb/apis/public.py", line 520, in artifact
+    artifact = Artifact(self.client, entity, project, artifact_name)
+  File "/Users/ivopdm/.conda/envs/mlflow-4024711ee7c81427e4f3461efa20a2017b5d781f/lib/python3.8/site-packages/wandb/apis/public.py", line 2583, in __init__
+    self._load()
+  File "/Users/ivopdm/.conda/envs/mlflow-4024711ee7c81427e4f3461efa20a2017b5d781f/lib/python3.8/site-packages/wandb/apis/public.py", line 3097, in _load
+    raise ValueError(
+ValueError: Project ivopdm/exercise_14 does not contain artifact: "segregated_data_train.csv:latest"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):

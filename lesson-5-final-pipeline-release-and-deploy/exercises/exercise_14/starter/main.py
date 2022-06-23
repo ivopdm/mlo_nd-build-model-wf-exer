@@ -44,7 +44,7 @@ def go(config: DictConfig):
             os.path.join(root_path, "preprocess"),
             "main",
             parameters={
-                "input_artifact": "raw_data.parquet",
+                "input_artifact": "raw_data.parquet:latest",
                 "artifact_name": "processed_data.csv",
                 "artifact_type": "processed_data",
                 "artifact_description": "Data after preprocessing",
@@ -59,10 +59,9 @@ def go(config: DictConfig):
             os.path.join(root_path, "check_data"),
             "main",
             parameters={
-                "reference_artifact": config["data"]["reference_artifact"],
-                "sample_artifact":"processed_data.csv",
-                "artifact_type": "check_data",
-                "artifact_description": "Data check",
+                "reference_artifact": config["data"]["reference_dataset"],
+                "sample_artifact":"exercise_6/data_train.csv:v0",
+                "ks_alpha": config["data"]["ks_alpha"],
             },
         )
         
@@ -74,10 +73,10 @@ def go(config: DictConfig):
             os.path.join(root_path, "segregate"),
             "main",
             parameters={
-                "input_artifact": "processed_data.csv",
-                "artifact_root": "segregated_data.csv",
+                "input_artifact": config["data"]["reference_dataset"],
+                "artifact_root": "segregated_data",
                 "artifact_type": "segregated_data",
-                "test_size": 0.2,
+                "test_size": config["data"]["test_size"],
             },
         )
         
@@ -95,10 +94,11 @@ def go(config: DictConfig):
             os.path.join(root_path, "random_forest"),
             "main",
             parameters={
-                "train_data": "segregated_data_train.csv",
+                "train_data": "exercise_14/segregated_data_train.csv:latest",
                 "model_config": model_config,
                 "export_artifact": "random_forest_model",
-                "val_size": 0.2,
+                "val_size": config["data"]["val_size"],
+                "stratify": config["data"]["stratify"],
             },
         )
 
@@ -109,8 +109,8 @@ def go(config: DictConfig):
             os.path.join(root_path, "evaluate"),
             "main",
             parameters={
-                "test_data": "segregated_data_test.csv",
-                "model_artifact": "random_forest_model",
+                "test_data": "segregated_data_test.csv:latest",
+                "model_export": "random_forest_model:latest",
             },
         )
 

@@ -1,0 +1,35 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-06-21T04:31:54.611975",
+    "startedAt": "2022-06-21T04:31:53.614593",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--input_artifact",
+        "exercise_14/preprocessed_data.csv:latest",
+        "--artifact_root",
+        "segregated_data",
+        "--artifact_type",
+        "segregated_data",
+        "--test_size",
+        "0.3",
+        "--random_state",
+        "42",
+        "--stratify",
+        "null"
+    ],
+    "state": "running",
+    "program": "run.py",
+    "codePath": "lesson-5-final-pipeline-release-and-deploy/exercises/exercise_14/starter/segregate/run.py",
+    "git": {
+        "remote": "https://github.com/ivopdm/mlo_nd-build-model-wf-exer.git",
+        "commit": "15449d77bad0eaa52134dba1020bf24b7bab10b1"
+    },
+    "email": "ivopdm@gmail.com",
+    "root": "/Users/ivopdm/Documents/GitHub/mlo_nd-build-model-wf-exer",
+    "host": "MBP-de-Ivo",
+    "username": "ivopdm",
+    "executable": "/Users/ivopdm/.conda/envs/mlflow-df4005a7b90d203e1d9e41cfb8430ad4305d30bb/bin/python"
+}

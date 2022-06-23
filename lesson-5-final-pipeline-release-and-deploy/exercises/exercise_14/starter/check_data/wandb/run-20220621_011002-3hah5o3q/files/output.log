@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.8.13, pytest-6.2.2, py-1.11.0, pluggy-0.13.1 -- /Users/ivopdm/.conda/envs/mlflow-3290796159e5ffc740ea9741d74e0d173c9f40f2/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/ivopdm/Documents/GitHub/mlo_nd-build-model-wf-exer/lesson-5-final-pipeline-release-and-deploy/exercises/exercise_14/starter/check_data
+collecting ... collected 4 items
+
+test_data.py::test_column_presence_and_type PASSED
+test_data.py::test_class_names PASSED
+test_data.py::test_column_ranges PASSED
+test_data.py::test_kolmogorov_smirnov PASSED
+
+=============================== warnings summary ===============================
+../../../../../../../../.conda/envs/mlflow-3290796159e5ffc740ea9741d74e0d173c9f40f2/lib/python3.8/site-packages/wandb/vendor/watchdog/utils/bricks.py:175
+  /Users/ivopdm/.conda/envs/mlflow-3290796159e5ffc740ea9741d74e0d173c9f40f2/lib/python3.8/site-packages/wandb/vendor/watchdog/utils/bricks.py:175: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+    class OrderedSet(collections.MutableSet):
+
+test_data.py::test_column_presence_and_type
+  /Users/ivopdm/.conda/envs/mlflow-3290796159e5ffc740ea9741d74e0d173c9f40f2/lib/python3.8/site-packages/pluggy/callers.py:187: DtypeWarning: Columns (16) have mixed types.Specify dtype option on import or set low_memory=False.
+    res = hook_impl.function(*args)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+======================== 4 passed, 2 warnings in 3.29s =========================

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ivopdm/Documents/GitHub/mlo_nd-build-model-wf-exer/lesson-5-final-pipeline-release-and-deploy/exercises/exercise_14/starter/mlruns/0/a7ff3b3928bf46edbd9c6a9a8a06b367/artifacts
+end_time: 1655782424238
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: a7ff3b3928bf46edbd9c6a9a8a06b367
+run_uuid: a7ff3b3928bf46edbd9c6a9a8a06b367
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1655782376536
+status: 3
+tags: []
+user_id: ivopdm
